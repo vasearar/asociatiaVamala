@@ -1,87 +1,155 @@
 {
-  "1": {
-    "ro": {
-      "title": "Statutul Asociației (actializat 2025)",
-      "tag": "Statutul Asociației",
-      "file": "/files/ANV.pdf"
-    },
-    "ru": {
-      "title": "Устав Ассоциации (обновлён 2025)",
-      "tag": "Устав Ассоциации",
-      "file": "/files/ANV.pdf"
-    },
-    "en": {
-      "title": "Association Statute (updated 2025)",
-      "tag": "Association Statute",
-      "file": "/files/ANV.pdf"
-    }
+"7": {
+  "ro": {
+    "title": "Scrisoare de informare Membri ANV Card de membru",
+    "tag": "Scrisori",
+    "file": "/files/Scrisoare de informare Membri ANV Card de membru.pdf"
   },
+  "ru": {
+    "title": "Информационное письмо Членам НТА Карта члена",
+    "tag": "Письма",
+    "file": "/files/Scrisoare de informare Membri ANV Card de membru.pdf"
+  },
+  "en": {
+    "title": "Information Letter to ANV Members Membership Card",
+    "tag": "Letters",
+    "file": "/files/Scrisoare de informare Membri ANV Card de membru.pdf"
+  }
+},
+"6": {
+  "ro": {
+    "title": "Cerere Membru de Drept",
+    "tag": "Cereri",
+    "file": "/files/Cerere Membru de Drept.pdf"
+  },
+  "ru": {
+    "title": "Заявление Член по праву",
+    "tag": "Заявления",
+    "file": "/files/Cerere Membru de Drept.pdf"
+  },
+  "en": {
+    "title": "Application for Full Member",
+    "tag": "Applications",
+    "file": "/files/Cerere Membru de Drept.pdf"
+  }
+},
+"5": {
+  "ro": {
+    "title": "Cerere Membru de Onoare",
+    "tag": "Cereri",
+    "file": "/files/Cerere Membru de Onoare.pdf"
+  },
+  "ru": {
+    "title": "Заявление Почетный член",
+    "tag": "Заявления",
+    "file": "/files/Cerere Membru de Onoare.pdf"
+  },
+  "en": {
+    "title": "Application for Honorary Member",
+    "tag": "Applications",
+    "file": "/files/Cerere Membru de Onoare.pdf"
+  }
+},
+"4": {
+  "ro": {
+    "title": "Cerere Membru Extraordinar",
+    "tag": "Cereri",
+    "file": "/files/Cerere Membru Extraordinar.pdf"
+  },
+  "ru": {
+    "title": "Заявление Чрезвычайный член",
+    "tag": "Заявления",
+    "file": "/files/Cerere Membru Extraordinar.pdf"
+  },
+  "en": {
+    "title": "Application for Extraordinary Member",
+    "tag": "Applications",
+    "file": "/files/Cerere Membru Extraordinar.pdf"
+  }
+},
+"3": {
+  "ro": {
+    "title": "Cerere Membru Simpatizant",
+    "tag": "Cereri",
+    "file": "/files/Cerere Membru Simpatizant.pdf"
+  },
+  "ru": {
+    "title": "Заявление Сочувствующий член",
+    "tag": "Заявления",
+    "file": "/files/Cerere Membru Simpatizant.pdf"
+  },
+  "en": {
+    "title": "Application for Supporting Member",
+    "tag": "Applications",
+    "file": "/files/Cerere Membru Simpatizant.pdf"
+  }
+},
   "2": {
     "ro": {
-      "title": "Comunicat: lansarea platformei de informare",
-      "tag": "Comunitate",
-      "file": "/files/ANV.pdf"
+      "title": "Decizia privind înregistrarea de stat a persoanei juridice",
+      "tag": "Decizii",
+      "file": "/files/Decizie_anv.pdf"
     },
     "ru": {
-      "title": "Пресс-релиз: запуск информационной платформы",
-      "tag": "Сообщество",
-      "file": "/files/ANV.pdf"
-    },
-    "en": {
-      "title": "Press Release: launch of the information platform",
-      "tag": "Community",
-      "file": "/files/ANV.pdf"
-    }
-  },
-  "3": {
-    "ro": {
-      "title": "Comunicat: lansarea platformei de informare",
-      "tag": "Comunicate",
-      "file": "/files/ANV.pdf"
-    },
-    "ru": {
-      "title": "Пресс-релиз: запуск информационной платформы",
-      "tag": "Пресс-релизы",
-      "file": "/files/ANV.pdf"
-    },
-    "en": {
-      "title": "Press Release: launch of the information platform",
-      "tag": "Press Releases",
-      "file": "/files/ANV.pdf"
-    }
-  },
-  "4": {
-    "ro": {
-      "title": "Hotărâre: codul de conduită pentru integritate",
-      "tag": "Hotărâri",
-      "file": "/files/ANV.pdf"
-    },
-    "ru": {
-      "title": "Решение: кодекс поведения для обеспечения честности",
+      "title": "Решение о государственной регистрации юридического лица",
       "tag": "Решения",
-      "file": "/files/ANV.pdf"
+      "file": "/files/Decizie_anv.pdf"
     },
     "en": {
-      "title": "Decision: code of conduct for integrity",
-      "tag": "Decisions",
-      "file": "/files/ANV.pdf"
+      "title": "Resolution on State Registration of the Legal Entity",
+      "tag": "Resolutions",
+      "file": "/files/Decizie_anv.pdf"
     }
   },
-  "5": {
+  "1": {
     "ro": {
-      "title": "Raport anual 2024",
-      "tag": "Rapoarte",
-      "file": "/files/ANV.pdf"
+      "title": "Statutul Asociației Naționale Vamale",
+      "tag": "Statutul Asociației",
+      "file": "/files/Statut_anv.pdf"
     },
     "ru": {
-      "title": "Годовой отчет 2024",
-      "tag": "Отчёты",
-      "file": "/files/ANV.pdf"
+      "title": "Устав Национальной Таможенной Ассоциации",
+      "tag": "Устав Ассоциации",
+      "file": "/files/Statut_anv.pdf"
     },
     "en": {
-      "title": "Annual Report 2024",
-      "tag": "Reports",
-      "file": "/files/ANV.pdf"
+      "title": "Statute of the National Customs Association",
+      "tag": "Association Statute",
+      "file": "/files/Statut_anv.pdf"
     }
+  },
+  "8": {
+  "ro": {
+    "title": "Acord de Colaborare cu Serviciul Vamal al RM",
+    "tag": "Acord de Colaborare",
+    "file": "/files/Acord de Colaborare cu Serviciul Vamal al RM.pdf"
+  },
+  "ru": {
+    "title": "Соглашение о сотрудничестве с Таможенной службой РМ",
+    "tag": "Соглашение о сотрудничестве",
+    "file": "/files/Acord de Colaborare cu Serviciul Vamal al RM.pdf"
+  },
+  "en": {
+    "title": "Cooperation Agreement with the Customs Service of the Republic of Moldova",
+    "tag": "Cooperation Agreement",
+    "file": "/files/Acord de Colaborare cu Serviciul Vamal al RM.pdf"
   }
+},
+"9": {
+  "ro": {
+    "title": "Parteneriat cu Asociația Națională Profesională a Lucrătorilor Vamali din România",
+    "tag": "Parteneriat",
+    "file": "/files/Parteneriat cu ANPLVR.pdf"
+  },
+  "ru": {
+    "title": "Партнёрство с Национальной профессиональной ассоциацией таможенных работников Румынии",
+    "tag": "Партнёрство",
+    "file": "/files/Parteneriat cu ANPLVR.pdf"
+  },
+  "en": {
+    "title": "Partnership with the National Professional Association of Customs Officers of Romania",
+    "tag": "Partnership",
+    "file": "/files/Parteneriat cu ANPLVR.pdf"
+  }
+}
 }

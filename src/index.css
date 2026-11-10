@@ -29,6 +29,67 @@ body{
   -moz-box-shadow: 3px 3px 35px 4px rgba(0, 0, 0, 0.44);
 }
 
+.logo-slider-track-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.logo-slider-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  animation: logo-slider-scroll 60s linear infinite;
+}
+
+.logo-slider-group {
+  display: flex;
+  align-items: center;
+  gap: clamp(2.5rem, 4vw, 3rem);
+  padding: 1.5rem clamp(2.5rem, 4vw, 3rem) 1.5rem 0;
+}
+
+.logo-slider-paused,
+.logo-slider-track:focus-within {
+  animation-play-state: paused;
+}
+
+.logo-slider-item {
+  display: grid;
+  place-items: center;
+  flex: 0 0 clamp(7.5rem, 14vw, 10rem);
+  height: 56px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.logo-slider-image {
+  max-width: 100%;
+  height: 56px;
+  max-height: 56px;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.72;
+  transition: filter 180ms ease, opacity 180ms ease, transform 180ms ease;
+}
+
+.logo-slider-item:hover .logo-slider-image,
+.logo-slider-item:focus-visible .logo-slider-image {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+.logo-slider-item:focus-visible {
+  outline: 2px solid #5F9CFF;
+  outline-offset: -4px;
+}
+
+@keyframes logo-slider-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @media (max-width: 640px) {
   .grid-cols-full {
     max-width: 390px;

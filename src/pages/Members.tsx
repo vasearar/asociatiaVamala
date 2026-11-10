@@ -62,19 +62,21 @@ const MemberCard = ({
       <div className="flex items-center gap-4">
         {showFallback ? (
           <div
-            className="size-14 sm:size-16 rounded-full small-shadow border-[1px] border-[#3A47EA] bg-[#3A47EA] text-white flex items-center justify-center text-base sm:text-lg font-semibold select-none"
+            className="size-14 sm:size-16 shrink-0 aspect-square rounded-full small-shadow border-[1px] border-[#3A47EA] bg-[#3A47EA] text-white flex items-center justify-center text-base sm:text-lg font-semibold select-none"
             aria-label={name || "Member avatar"}
             role="img"
           >
             {initials}
           </div>
         ) : (
-          <img
-            className="size-14 sm:size-16 rounded-full object-cover object-top small-shadow border-[1px] border-[#3A47EA]"
-            src={imageSrc}
-            alt={name}
-            onError={() => setImgError(true)}
-          />
+          <div className="size-14 sm:size-16 shrink-0 aspect-square overflow-hidden rounded-full small-shadow border-[1px] border-[#3A47EA]">
+            <img
+              className="size-full object-cover object-top"
+              src={imageSrc}
+              alt={name}
+              onError={() => setImgError(true)}
+            />
+          </div>
         )}
 
         <div className="flex flex-col">

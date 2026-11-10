@@ -1,12 +1,14 @@
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
+import LogoSlider from "./LogoSlider";
 
 const Footer = () => {
   const { t } = useTranslation(undefined, { keyPrefix: "footer" });
 
   return (
     <footer>
-      <div className="bg-[#f1f1f1] py-10 mt-28 border-y border-[#BDBFC0]">
+      <LogoSlider />
+      <div className="bg-[#f1f1f1] py-10 border-b border-[#BDBFC0]">
         <div className="grid grid-cols-full gap-y-8">
           <div className="col-span-full md:col-span-6 lg:col-span-4">
             <div className="flex gap-3 items-center justify-start">
@@ -24,6 +26,14 @@ const Footer = () => {
           >
             <ul className="flex flex-col gap-2 items-start">
               <li className="font-medium mb-2 sm:mb-4">{t("quickLinks")}</li>
+              <li>
+                <NavLink
+                  className="hover:text-[#5F9CFF] transition-colors"
+                  to="/forum&workshop"
+                >
+                  {t("forumWorkshop")}
+                </NavLink>
+              </li>
               <li>
                 <NavLink
                   className="hover:text-[#5F9CFF] transition-colors"

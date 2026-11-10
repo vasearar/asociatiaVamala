@@ -3,19 +3,30 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { FileText } from "lucide-react";
+import ArticleGallery from "../components/ArticleGallery";
+import { normalizeImagePaths } from "../utils/news";
+import type { NewsItemLang, NewsJson } from "../utils/news";
 
 type LangKey = "ro" | "ru" | "en";
-type NewsItemLang = {
-  title: string;
-  text: string;
-  tag: string;
-  data: string;
-  image: string;
+
+const removeInlineAttachmentList = (text: string) => {
+  const markers = ["Documente anexate:", "Прилагаемые документы:", "Attached documents:"];
+  const marker = markers.find((value) => text.includes(value));
+
+  if (!marker) return text;
+
+  const start = text.indexOf(`\n\n${marker}`);
+  if (start === -1) return text;
+
+  const closingMarkers = ["\n\nVă mulțumim", "\n\nБлагодарим", "\n\nWe appreciate"];
+  const closing = closingMarkers
+    .map((value) => text.indexOf(value, start))
+    .filter((index) => index !== -1)
+    .sort((a, b) => a - b)[0];
+
+  return closing === undefined ? text.slice(0, start) : text.slice(0, start) + text.slice(closing);
 };
-type NewsJson = Record<
-  string,
-  { ro: NewsItemLang; ru: NewsItemLang; en: NewsItemLang }
->;
 
 const NewsDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -29,7 +40,7 @@ const NewsDetail = () => {
     let mounted = true;
     (async () => {
       try {
-        const res = await fetch("/data/news.json");
+        const res = await fetch("/data/news.json", { cache: "no-store" });
         const json = (await res.json()) as NewsJson;
         if (mounted) setRaw(json);
       } catch (e) {
@@ -43,13 +54,19 @@ const NewsDetail = () => {
     };
   }, []);
 
-  const item = useMemo(() => {
+  const item = useMemo<NewsItemLang | null>(() => {
     if (!raw || !id) return null;
     const record = raw[id];
     if (!record) return null;
     // prefer current lang; fallback to EN
-    return (record as any)[lang] ?? record.en;
+    return record[lang] ?? record.en;
   }, [raw, id, lang]);
+
+  const images = useMemo(() => normalizeImagePaths(item?.image), [item]);
+  const articleText = useMemo(
+    () => (item ? removeInlineAttachmentList(item.text) : ""),
+    [item]
+  );
 
   if (loading) {
     return (
@@ -81,12 +98,7 @@ const NewsDetail = () => {
           {t("backToNews") ?? "← Back to all news"}
         </Link>
 
-        <img
-          className="w-full h-80 md:h-[420px] object-cover rounded-2xl small-shadow mt-4"
-          src={item.image}
-          alt={item.title}
-          loading="eager"
-        />
+        <ArticleGallery images={images} title={item.title} />
 
         <div className="mt-6 flex items-center gap-2">
           <span className="text-sm text-[#3F3F40]">{item.data} •</span>
@@ -98,8 +110,28 @@ const NewsDetail = () => {
         <h1 className="text-3xl md:text-4xl mt-3">{item.title}</h1>
 
         <div className="mt-4 text-[#3F3F40] leading-7 whitespace-pre-line">
-          {item.text}
+          {articleText}
         </div>
+
+        {item.attachments && item.attachments.length > 0 && (
+          <section className="mt-8" aria-label={t("attachments")}>
+            <h2 className="text-xl mb-3">{t("attachments")}</h2>
+            <div className="flex flex-wrap gap-3">
+              {item.attachments.map((attachment) => (
+                <a
+                  key={`${attachment.path}-${attachment.name}`}
+                  href={attachment.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-2xl border border-[#BDBFC0] bg-white px-4 py-3 text-[#3F3F40] transition hover:border-[#5F9CFF] hover:text-[#145EEC] focus:outline-none focus:ring-2 focus:ring-[#5F9CFF]"
+                >
+                  <FileText className="size-5" aria-hidden="true" />
+                  <span>{attachment.name}</span>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
     </article>
   );

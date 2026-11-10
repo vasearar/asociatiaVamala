@@ -6,7 +6,11 @@
     "news": "Noutăți",
     "documents": "Documente",
     "members": "Membri",
-    "contact": "Contact"
+    "contact": "Contact",
+    "forumWorkshop": "Forum & Workshop",
+    "navigation": "Navigare principală",
+    "openMenu": "Deschide meniul",
+    "closeMenu": "Închide meniul"
   },
   "hero": {
     "imgAlt": "Imagine cu vamă",
@@ -25,13 +29,14 @@
     "members": "Membri",
     "news": "Știri",
     "contactCategory": "Contacte",
-    "address": "MD-2008, mun. Chisinău, str. Vasile Lupu, 6, nr. 58",
+    "address": "mun. Chisinău, str. Alexei Șciusev, 44, of.6",
     "phone": "Tel: +373 69195884",
     "fax": "Fax: +373 22992235",
     "email": "Email: contact@anv.md",
     "facebook": "Facebook",
     "instagram": "Instagram",
-    "copyright": "© 2025 Asociația Națională Vamală. Toate drepturile rezervate."
+    "copyright": "© 2026 Asociația Națională Vamală. Toate drepturile rezervate.",
+    "forumWorkshop": "Forum & Workshop"
   },
   "news": {
     "header": "Ultimele știri",
@@ -49,7 +54,7 @@
   },
   "contact": {
     "header": "Contacte",
-    "address": "<b>Adresă:</b> mun. Chisinău, str. Vasile Lupu, 6, nr. 58",
+    "address": "<b>Adresă:</b> mun. Chisinău, str. Alexei Șciusev, 44, of.6",
     "phone": "<b>Telefon:</b> +373 69 195 884",
     "fax": "<b>Fax:</b> +373 22 992 235",
     "mail": "<b>Email:</b> contact@anv.md",
@@ -61,10 +66,10 @@
     "sentOk": "Success"
   },
   "members": {
-    "header": "Membri",
-    "subHeader": "Consiliul Director și membrii fondatori",
-    "consilium": "Consiliu director",
-    "founders": "Membri"
+    "header": "Președintele Asociației, Consiliul Național, Membrii fondatori",
+    "subHeader": "",
+    "consilium": "",
+    "founders": ""
   },
   "filesPage": {
     "header": "Documente / Acte",
@@ -74,6 +79,207 @@
     "fromOldToNew": "Cele mai vechi",
     "fromNewToOld": "Cele mai noi",
     "loading": "Se încarcă...",
-    "noResults": "Niciun rezultat"
+    "noResults": "Niciun rezultat",
+    "showMore": "Afișează mai multe documente"
+  },
+  "newsDetail": {
+    "backToNews": "Înapoi la știri",
+    "attachments": "Atașamente"
+  },
+  "forumWorkshop": {
+    "eyebrow": "FORUM REGIONAL & WORKSHOP",
+    "title": "Coridorul de Mijloc.",
+    "titleAccent": "Un viitor digital, împreună.",
+    "intro": "Două zile de dialog regional și explorare practică a tranzitului digital, alături de comunitatea vamală, mediul de afaceri și partenerii din tehnologie.",
+    "eventName": "Forum & Workshop",
+    "city": "Chișinău, Republica Moldova",
+    "monthYear": "Noiembrie 2026",
+    "dates": "17–18 noiembrie 2026",
+    "venue": "Hotel VisPas",
+    "address": "Str. Alexandru Lăpușneanu 26, Chișinău",
+    "partners": "Partenerii evenimentului",
+    "chooseAgenda": "Alege agenda",
+    "forum": "Forumul regional",
+    "workshop": "Workshop practic",
+    "upcoming": "A treia agendă",
+    "comingSoon": "În curând",
+    "comingSoonText": "Programul va fi publicat aici imediat ce va fi disponibil.",
+    "practicalInfo": "Informații practice",
+    "locationLabel": "Locație",
+    "dateLabel": "Data și ora de început",
+    "localTime": "Toate orele sunt locale, pentru Chișinău.",
+    "languageLabel": "Limbile evenimentului",
+    "forumLanguages": "Engleză, rusă; română (opțional)",
+    "workshopLanguages": "Rusă, engleză; română (opțional)",
+    "audienceLabel": "Cui se adresează?",
+    "forumAudience": "Asociația Națională Vamală (ANV), Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ), partenerii inițiativei, administrații vamale, organizații internaționale, parteneri de dezvoltare, reprezentanți ai mediului de afaceri și invitați internaționali.",
+    "workshopAudience": "Furnizori de servicii digitale și companii de tehnologie; companii de transport și logistică, expeditori de mărfuri și operatori de tranzit; autorități vamale și alte părți interesate din transport; asociații de afaceri și camere de comerț.",
+    "programme": "Programul evenimentului",
+    "download": "Descarcă agenda",
+    "originalPdf": "PDF original · Engleză",
+    "details": "Vorbitori și detalii",
+    "speakers": "Vorbitori",
+    "sessionsCount": "{{count}} puncte în program",
+    "viewProgramme": "Vezi programul",
+    "navigation": "Navigare principală",
+    "openMenu": "Deschide meniul",
+    "closeMenu": "Închide meniul",
+    "kinds": {
+      "registration": "Înregistrare",
+      "opening": "Deschidere",
+      "speeches": "Dialog",
+      "break": "Pauză",
+      "lunch": "Prânz",
+      "keynote": "Discurs principal",
+      "demo": "Demonstrație în direct",
+      "panel": "Panel de discuții",
+      "closing": "Concluzii",
+      "reception": "Networking",
+      "session": "Sesiunea I",
+      "workshop": "Sesiunea II · Workshop",
+      "exercise": "Sesiunea III · Simulare",
+      "dinner": "Networking"
+    },
+    "sessions": {
+      "forum": {
+        "registration": {
+          "title": "Înregistrare, networking și cafea de bun venit"
+        },
+        "coffee": {
+          "title": "Pauză de cafea"
+        },
+        "opening": {
+          "title": "Deschiderea oficială",
+          "speakers": [
+            "Radu Burduja — Discurs de deschidere a forumului; moderator — Institutul Euro-Atlantic pentru Consolidarea Rezilienței",
+            "Virgiliu Mitu — Președintele ANV",
+            "Niclas Rueffer — Transformarea digitală a IMM-urilor în țările Parteneriatului Estic (DT4SME)",
+            "Radu Vrabie — Directorul Serviciului Vamal al Republicii Moldova",
+            "Vadim Muntean — Vicepreședintele ANV",
+            "Igbal Babayev — Președintele MCTAC",
+            "Sergiu Tonu — Manager de proiect Digital Transit Hub"
+          ]
+        },
+        "welcome": {
+          "title": "Mesaje de bun venit",
+          "speakers": [
+            "Vakhtang Lashkaradze — Serviciul de Venituri al Georgiei",
+            "Sabuhi Tamirov — GUAM",
+            "Sergiusz Horlach — PUIG",
+            "Dariusz Janusz Kostrzebski — PUIG",
+            "Fikrat Alasgarli — Fikrat Alasgarli & Partners — consultanță vamală și fiscală",
+            "Vusal Halilov — MOBIL Group AZ",
+            "Umut Sedele — SDL — consultanță vamală autorizată",
+            "Oleksandr Andreiev — Întreprinderea privată ROKADA",
+            "Andrey Bogomolov — ROKADA Group",
+            "Piotr Ciarkowski — PUIG / semnarea protocolului cu ANV"
+          ]
+        },
+        "trade": {
+          "title": "Alocuțiuni: facilitarea transportului și comerțului internațional",
+          "speakers": [
+            "Valeriu Tulbu — AITA",
+            "Vasile Soiman — Asociația Națională Profesională a Lucrătorilor Vamali din România (ANPLVR)",
+            "Marin Ciobanu — ZEL Bălți",
+            "Victor Pantiru — Biroul asociat de avocați Pantiru & Partners",
+            "Ana Maria Portoni — GMT EuroTrans",
+            "Adrian Tenu — IMPERADOR",
+            "Dorel Noroc — Asociația Băncilor din Moldova (ABM)",
+            "Igor Stefanet — Asociația Obștească LogiHub",
+            "Mariana Rufa — Asociația Businessului European (EBA)",
+            "Dmitrii Razloga — IMENSITATE",
+            "Eduard Sirbu — DecTrans Broker",
+            "Grigore Cojocaru — AXEDUM",
+            "Alex Micu — MecAgro",
+            "Rodica Musteata — Monitorul Fiscal",
+            "Adina Afendulis — Expediror Prest",
+            "Constantin Pirii — ICCO GROUP",
+            "Rares Felder — Școala MONTESSORI Brașov"
+          ]
+        },
+        "lunch": {
+          "title": "Prânz de networking"
+        },
+        "keynote": {
+          "title": "Discurs principal — Viitorul tranzitului digital",
+          "description": "Tendințe internaționale în digitalizarea vamală, schimbul electronic de date, interoperabilitate, frontiere inteligente și coridoare de tranzit digital.",
+          "speakers": [
+            "Igbal Babayev — Președintele MCTAC",
+            "Mario Apostolov — UNECE"
+          ]
+        },
+        "hub": {
+          "title": "Digital Transit Hub — De la concept la instrument regional",
+          "description": "Prezentarea soluției; demonstrație în direct; funcționalități; experiențele utilizatorilor; direcții de dezvoltare.",
+          "speakers": [
+            "Igbal Babayev — Președintele MCTAC",
+            "Sergiu Tonu — Manager de proiect al Asociației Naționale Vamale din Moldova (ANV)"
+          ]
+        },
+        "business": {
+          "title": "Panel de afaceri și logistică — De ce are nevoie mediul de afaceri de la vama digitală?",
+          "description": "Participanți: transportatori, operatori logistici, brokeri vamali, importatori/exportatori, asociații profesionale și organizații de afaceri. Sesiunea va identifica problemele utilizatorilor, costurile și întârzierile, necesitățile de informare, duplicarea datelor, oportunitățile de automatizare și funcționalitățile prioritare."
+        },
+        "closing": {
+          "title": "Concluzii finale",
+          "description": "Prezentarea principalelor concluzii și introducerea workshopului din ziua următoare."
+        },
+        "reception": {
+          "title": "Recepție de networking",
+          "description": "Un cadru pentru relații profesionale, schimb informal de experiență, identificarea unor viitoare parteneriate și networking internațional."
+        }
+      },
+      "workshop": {
+        "registration": {
+          "title": "Înregistrare, networking și cafea de bun venit"
+        },
+        "coffee": {
+          "title": "Pauză de cafea"
+        },
+        "opening": {
+          "title": "Deschiderea oficială",
+          "speakers": [
+            "Virgil Mitu — Președintele Asociației Naționale Vamale din Moldova (ANV)",
+            "Vadim Muntean — Vicepreședintele Asociației Naționale Vamale din Moldova (ANV)"
+          ]
+        },
+        "digitalization": {
+          "title": "Sesiunea I — Digitalizarea coridorului de tranzit",
+          "speakers": [
+            "Igbal Babayev — Președintele MCTAC; Digital Transit Hub MCTAC",
+            "Mario Apostolov — UNECE; aspecte organizatorice și tehnice ale Digital Transit Hub MCTAC",
+            "Sergiu Tonu — Manager de proiect al Asociației Naționale Vamale din Moldova"
+          ]
+        },
+        "journey": {
+          "title": "Sesiunea II — Workshop: parcursul tranzitului digital",
+          "description": "Explorarea practică a procedurilor de tranzit de la început până la final. Studiu de caz practic pentru partenerii din țările MCTAC și utilizatori.",
+          "speakers": [
+            "Igbal Babayev — Moderator; președintele MCTAC"
+          ]
+        },
+        "simulation": {
+          "title": "Sesiunea III — Exercițiu de simulare: aplicarea practică a procedurilor de tranzit în scenarii în timp real",
+          "description": "Exercițiu practic privind procedurile de tranzit, cu simularea unor scenarii operaționale în timp real.",
+          "speakers": [
+            "Igbal Babayev — Moderator; președintele MCTAC"
+          ]
+        },
+        "closing": {
+          "title": "Încheierea lucrărilor",
+          "description": "Recomandări și coordonare între principalele părți interesate. Alocuțiuni de încheiere.",
+          "speakers": [
+            "Bahar Arabova — GIZ Azerbaidjan / Transformarea digitală a IMM-urilor în țările Parteneriatului Estic (DT4SME)"
+          ]
+        },
+        "lunch": {
+          "title": "Prânz"
+        },
+        "dinner": {
+          "title": "Cină de networking"
+        }
+      }
+    },
+    "eventPast": "Evenimentul a avut loc"
   }
 }

@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { normalizeImagePaths } from "../utils/news";
+import type { NewsItemLang, NewsJson } from "../utils/news";
 
-type NewsItem = {
+type NewsItem = Omit<NewsItemLang, "image"> & {
   id: string;
   idNum: number;
-  title: string;
-  text: string;
-  tag: string;
-  data: string;
-  image: string;
+  image?: string;
 };
 
 const getLang = (lng?: string): "ro" | "ru" | "en" => {
@@ -26,14 +24,19 @@ const News = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const res = await fetch("/data/news.json");
-        const data = await res.json();
+        const res = await fetch("/data/news.json", { cache: "no-store" });
+        const data = (await res.json()) as NewsJson;
 
         const lang = getLang(i18n.resolvedLanguage || i18n.language);
-        const items: NewsItem[] = Object.entries<any>(data)
+        const items: NewsItem[] = Object.entries(data)
           .map(([id, value]) => {
             const content = value[lang] ?? value["en"];
-            return { id, idNum: Number(id), ...content };
+            return {
+              id,
+              idNum: Number(id),
+              ...content,
+              image: normalizeImagePaths(content.image)[0],
+            };
           })
           .sort((a, b) => a.idNum - b.idNum); // oldest→newest
 
@@ -63,11 +66,15 @@ const News = () => {
             key={item.id}
             className="col-span-1 rounded-2xl small-shadow"
           >
-            <img
-              className="rounded-t-2xl w-full h-48 object-cover"
-              src={item.image}
-              alt={item.title}
-            />
+            {item.image ? (
+              <img
+                className="rounded-t-2xl w-full h-48 object-cover"
+                src={item.image}
+                alt={item.title}
+              />
+            ) : (
+              <div className="h-48 rounded-t-2xl bg-[#f1f1f1]" aria-hidden="true" />
+            )}
             <div className="p-4">
               <div className="flex gap-1 items-center">
                 <span className="text-xs text-[#3F3F40]">{item.data} •</span>

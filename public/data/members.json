@@ -6,9 +6,9 @@
       "en": "Members"
     },
     "subHeader": {
-      "ro": "Consiliul director și membrii fondatori",
-      "ru": "Совет директоров и учредители",
-      "en": "Board of Directors and Founding Members"
+      "ro": "",
+      "ru": "",
+      "en": ""
     },
     "consilium": {
       "ro": "Consiliul director",
@@ -22,129 +22,115 @@
     },
     "1": {
       "role": {
-        "ro": "Președinte",
-        "ru": "Президент",
-        "en": "President"
+        "ro": "Fondator / Președintele Asociației Naționale Vamale",
+        "ru": "Учредитель / Президент Национальной Таможенной Ассоциации",
+        "en": "Founder / President of the National Customs Association"
       },
       "name": {
-        "ro": "Marina Popescu",
-        "ru": "Марина Попеску",
-        "en": "Marina Popescu"
+        "ro": "Virgiliu Mîțu",
+        "ru": "Виргилиу Мыуцу",
+        "en": "Virgiliu Mîțu"
       },
-      "image": "/images/membru.jpg",
+      "image": "/images/virgiliumitu.jpg",
       "type": "consilium"
     },
     "2": {
       "role": {
-        "ro": "Vicepreședinte",
-        "ru": "Вице-президент",
-        "en": "Vice President"
+        "ro": "Fondator / Președintele Consiliului Național al Asociației Naționale Vamale",
+        "ru": "Учредитель / Председатель Национального Совета Национальной Таможенной Ассоциации",
+        "en": "Founder / President of the National Council of the National Customs Association"
       },
       "name": {
-        "ro": "Ion Rusu",
-        "ru": "Ион Русу",
-        "en": "Ion Rusu"
+        "ro": "Mihail Filimon",
+        "ru": "Михаил Филимон",
+        "en": "Mihail Filimon"
       },
-      "image": "",
+      "image": "/images/mihailfilimon.jpg",
       "type": "consilium"
     },
     "3": {
       "role": {
-        "ro": "Secretar general",
-        "ru": "Генеральный секретарь",
-        "en": "Secretary General"
+        "ro": "Fondator / Prim-vicepreședinte al Consiliului Național al Asociației Naționale Vamale",
+        "ru": "Учредитель / Первый вице-президент Национального Совета Национальной Таможенной Ассоциации",
+        "en": "Founder / First Vice President of the National Council of the National Customs Association"
       },
       "name": {
-        "ro": "Elena Cebotari",
-        "ru": "Елена Чеботарь",
-        "en": "Elena Cebotari"
+        "ro": "Iurie Rusnac",
+        "ru": "Юрие Руснак",
+        "en": "Iurie Rusnac"
       },
-      "image": "https://i.pinimg.com/736x/07/a1/dd/07a1dd0b43aaf72f4f9ed312da490fe9.jpg",
+      "image": "/images/iurierusnac.jpg",
       "type": "consilium"
     },
     "4": {
       "role": {
-        "ro": "Rol: Cofondator / susținător",
-        "ru": "Роль: Сооснователь / сторонник",
-        "en": "Role: Co-founder / supporter"
+        "ro": "Fondator / Vicepreședinte al Consiliului Național al Asociației Naționale Vamale",
+        "ru": "Учредитель / Вице-президент Национального Совета Национальной Таможенной Ассоциации",
+        "en": "Founder / Vice President of the National Council of the National Customs Association"
       },
       "name": {
-        "ro": "Andrei Munteanu",
-        "ru": "Андрей Мунтяну",
-        "en": "Andrei Munteanu"
+        "ro": "Vadim Muntean",
+        "ru": "Вадим Мунтян",
+        "en": "Vadim Muntean"
       },
-      "image": "https://i.pinimg.com/736x/4a/df/ff/4adffff1994a4a31139f3d5d2635d75d.jpg",
-      "type": "member"
+      "image": "/images/vadimmunteanu.jpg",
+      "type": "consilium"
     },
     "5": {
       "role": {
-        "ro": "Rol: Cofondator / susținător",
-        "ru": "Роль: Сооснователь / сторонник",
-        "en": "Role: Co-founder / supporter"
+        "ro": "Fondator / Vicepreședinte al Consiliului Național al Asociației Naționale Vamale",
+        "ru": "Учредитель / Вице-президент Национального Совета Национальной Таможенной Ассоциации",
+        "en": "Founder / Vice President of the National Council of the National Customs Association"
       },
       "name": {
-        "ro": "Tatiana Țurcan",
-        "ru": "Татьяна Цуркан",
-        "en": "Tatiana Țurcan"
+        "ro": "Ianuș Erhan",
+        "ru": "Януш Эрхан",
+        "en": "Ianuș Erhan"
       },
-      "image": "https://i.pinimg.com/736x/c7/93/d6/c793d6a945f969845ea93c546fbfa638.jpg",
-      "type": "member"
+      "image": "/images/ianuserhan.jpg",
+      "type": "consilium"
     },
     "6": {
       "role": {
-        "ro": "Rol: Cofondator / susținător",
-        "ru": "Роль: Сооснователь / сторонник",
-        "en": "Role: Co-founder / supporter"
+        "ro": "Fondator / Secretar general al Consiliului Național al Asociației Naționale Vamale",
+        "ru": "Учредитель / Генеральный секретарь Национального Совета Национальной Таможенной Ассоциации",
+        "en": "Founder / Secretary General of the National Council of the National Customs Association"
       },
       "name": {
-        "ro": "Victor Balan",
-        "ru": "Виктор Балан",
-        "en": "Victor Balan"
+        "ro": "Vasile Plăcintă",
+        "ru": "Василе Плэчинтэ",
+        "en": "Vasile Plăcintă"
       },
-      "image": "https://i.pinimg.com/1200x/bc/d8/d4/bcd8d4d8302a5ba624e5832caa3738bc.jpg",
-      "type": "member"
+      "image": "/images/vasileplacinta.jpg",
+      "type": "consilium"
     },
     "7": {
       "role": {
-        "ro": "Rol: Cofondator / susținător",
-        "ru": "Роль: Сооснователь / сторонник",
-        "en": "Role: Co-founder / supporter"
+        "ro": "Fondator / Trezorierul Național al Asociației Naționale Vamale",
+        "ru": "Учредитель / Национальный казначей Национальной Таможенной Ассоциации",
+        "en": "Founder / National Treasurer of the National Customs Association"
       },
       "name": {
-        "ro": "Radu Țurcanu",
-        "ru": "Раду Цуркану",
-        "en": "Radu Țurcanu"
+        "ro": "Anatolie Roibu",
+        "ru": "Анатолий Ройбу",
+        "en": "Anatolie Roibu"
       },
-      "image": "https://i.pinimg.com/736x/4e/1f/06/4e1f0685b15a55de8954ce8508961f9a.jpg",
-      "type": "member"
+      "image": "/images/anatolieroibu.jpg",
+      "type": "consilium"
     },
     "8": {
       "role": {
-        "ro": "Rol: Cofondator / susținător",
-        "ru": "Роль: Сооснователь / сторонник",
-        "en": "Role: Co-founder / supporter"
+        "ro": "Fondator / Cenzorul Asociației Naționale Vamale",
+        "ru": "Учредитель / Ревизор Национальной Таможенной Ассоциации",
+        "en": "Founder / Auditor of the National Customs Association"
       },
       "name": {
-        "ro": "Olga Sârbu",
-        "ru": "Ольга Сырбу",
-        "en": "Olga Sârbu"
+        "ro": "Creița Constantin",
+        "ru": "Крэйца Константин",
+        "en": "Creița Constantin"
       },
-      "image": "https://i.pinimg.com/1200x/33/4b/fd/334bfd4ee7176b161425d9b868740bdb.jpg",
-      "type": "member"
-    },
-    "9": {
-      "role": {
-        "ro": "Rol: Cofondator / susținător",
-        "ru": "Роль: Сооснователь / сторонник",
-        "en": "Role: Co-founder / supporter"
-      },
-      "name": {
-        "ro": "Sergiu Țâru",
-        "ru": "Сергей Цыру",
-        "en": "Sergiu Țâru"
-      },
-      "image": "https://i.pinimg.com/736x/5f/70/ca/5f70caec7ef455b3ecd43b428ed7dfa2.jpg",
-      "type": "member"
+      "image": "/images/constantincreita.jpg",
+      "type": "consilium"
     }
   }
 }

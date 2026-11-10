@@ -4,27 +4,17 @@ import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import * as Select from "@radix-ui/react-select";
 import { ChevronDown, Check } from "lucide-react";
+import { normalizeImagePaths } from "../utils/news";
+import type { NewsItemLang, NewsJson } from "../utils/news";
 
 type LangKey = "ro" | "ru" | "en";
 
-type NewsItemLang = {
-  title: string;
-  text: string;
-  tag: string;
-  data: string;
-  image: string;
+type NewsCard = Omit<NewsItemLang, "image"> & {
+  id: string;
+  idNum: number;
+  idx: number;
+  image?: string;
 };
-
-type NewsJson = Record<
-  string,
-  {
-    ro: NewsItemLang;
-    ru: NewsItemLang;
-    en: NewsItemLang;
-  }
->;
-
-type NewsCard = NewsItemLang & { id: string; idNum: number; idx: number };
 
 type Option = { value: string; label: string };
 
@@ -83,7 +73,7 @@ const NewsPage = () => {
     let isMounted = true;
     (async () => {
       try {
-        const res = await fetch("/data/news.json");
+        const res = await fetch("/data/news.json", { cache: "no-store" });
         const json = (await res.json()) as NewsJson;
         if (isMounted) setRaw(json);
       } catch (e) {
@@ -105,12 +95,14 @@ const NewsPage = () => {
     if (!raw) return [];
     return Object.entries(raw)
       .map(([id, item], idx) => {
-        const content = (item as any)[lang] ?? item.en;
+        const content = item[lang] ?? item.en;
+        const images = normalizeImagePaths(content.image);
         return {
           id,
           idNum: Number(id),
           idx,
           ...content,
+          image: images[0],
         };
       })
       .sort((a, b) => a.idNum - b.idNum);
@@ -193,12 +185,16 @@ const NewsPage = () => {
               key={item.id}
               className="col-span-1 rounded-2xl small-shadow overflow-hidden bg-white"
             >
-              <img
-                className="rounded-t-2xl w-full h-48 object-cover"
-                src={item.image}
-                alt={item.title}
-                loading="lazy"
-              />
+              {item.image ? (
+                <img
+                  className="rounded-t-2xl w-full h-48 object-cover"
+                  src={item.image}
+                  alt={item.title}
+                  loading="lazy"
+                />
+              ) : (
+                <div className="h-48 bg-[#f1f1f1]" aria-hidden="true" />
+              )}
               <div className="p-4">
                 <div className="flex gap-1 items-center">
                   <span className="text-xs text-[#3F3F40]">{item.data} •</span>

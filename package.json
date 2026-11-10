@@ -5,9 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && node scripts/prepare-host-routes.mjs",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:events": "node --test tests/eventDates.test.mjs",
+    "test:host-routes": "node --test tests/hostRoutes.test.mjs",
+    "build:host": "npm run build && node scripts/package-host-update.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

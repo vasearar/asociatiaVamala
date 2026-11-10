@@ -6,7 +6,11 @@
     "news": "News",
     "documents": "Documents",
     "members": "Members",
-    "contact": "Contact"
+    "contact": "Contact",
+    "forumWorkshop": "Forum & Workshop",
+    "navigation": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "hero": {
     "imgAlt": "Customs image",
@@ -31,7 +35,8 @@
     "email": "Email: contact@anv.md",
     "facebook": "Facebook",
     "instagram": "Instagram",
-    "copyright": "© 2025 National Customs Association. All rights reserved."
+    "copyright": "© 2026 National Customs Association. All rights reserved.",
+    "forumWorkshop": "Forum & Workshop"
   },
   "news": {
     "header": "Latest News",
@@ -61,10 +66,10 @@
     "sentOk": "Success"
   },
   "members": {
-    "header": "Members",
-    "subHeader": "Board of Directors and Founding Members",
-    "consilium": "Board of Directors",
-    "founders": "Founding Members"
+    "header": "President of the Association, National Council, Founding Members",
+    "subHeader": "",
+    "consilium": "",
+    "founders": ""
   },
   "filesPage": {
     "header": "Documents",
@@ -74,6 +79,207 @@
     "fromOldToNew": "Oldest first",
     "fromNewToOld": "Newest first",
     "loading": "Loading...",
-    "noResults": "No results"
+    "noResults": "No results",
+    "showMore": "Show more documents"
+  },
+  "newsDetail": {
+    "backToNews": "Back to news",
+    "attachments": "Attachments"
+  },
+  "forumWorkshop": {
+    "eyebrow": "REGIONAL FORUM & WORKSHOP",
+    "title": "The Middle Corridor.",
+    "titleAccent": "A digital future, together.",
+    "intro": "Two days of regional dialogue and practical exploration of digital transit, bringing together the customs community, business and technology partners.",
+    "eventName": "Forum & Workshop",
+    "city": "Chișinău, Republic of Moldova",
+    "monthYear": "November 2026",
+    "dates": "17–18 November 2026",
+    "venue": "VisPas Hotel",
+    "address": "26 Alexandru Lăpușneanu Street, Chișinău",
+    "partners": "Event partners",
+    "chooseAgenda": "Choose an agenda",
+    "forum": "Regional forum",
+    "workshop": "Practical workshop",
+    "upcoming": "Third agenda",
+    "comingSoon": "Coming soon",
+    "comingSoonText": "The programme will be published here as soon as it is available.",
+    "practicalInfo": "Plan your visit",
+    "locationLabel": "Location",
+    "dateLabel": "Date & start time",
+    "localTime": "All times are local to Chișinău.",
+    "languageLabel": "Event languages",
+    "forumLanguages": "English, Russian; Romanian (optional)",
+    "workshopLanguages": "Russian, English; Romanian (optional)",
+    "audienceLabel": "Who is it for?",
+    "forumAudience": "National Customs Association (ANV), Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ), initiative partners, customs administrations, international organizations, development partners, business representatives and international guests.",
+    "workshopAudience": "Digital service providers and technology companies; transport and logistics companies, freight forwarders and transit operators; customs and other transport-related stakeholders; business associations and chambers of commerce.",
+    "programme": "Programme",
+    "download": "Download agenda",
+    "originalPdf": "Original PDF · English",
+    "details": "Speakers & details",
+    "speakers": "Speakers",
+    "sessionsCount": "{{count}} programme items",
+    "viewProgramme": "Explore the programme",
+    "navigation": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "kinds": {
+      "registration": "Registration",
+      "opening": "Opening",
+      "speeches": "Dialogue",
+      "break": "Break",
+      "lunch": "Lunch",
+      "keynote": "Keynote",
+      "demo": "Live demonstration",
+      "panel": "Discussion panel",
+      "closing": "Conclusions",
+      "reception": "Networking",
+      "session": "Session I",
+      "workshop": "Session II · Workshop",
+      "exercise": "Session III · Simulation",
+      "dinner": "Networking"
+    },
+    "sessions": {
+      "forum": {
+        "registration": {
+          "title": "Registration, networking & welcome coffee"
+        },
+        "coffee": {
+          "title": "Coffee break"
+        },
+        "opening": {
+          "title": "Official opening",
+          "speakers": [
+            "Radu Burduja — Forum opening speech; moderator — Euro-Atlantic Institute for Building Resilience",
+            "Virgiliu Mitu — President of the ANV",
+            "Niclas Rueffer — Digital Transformation of SMEs in Eastern Partnership Countries (DT4SME)",
+            "Radu Vrabie — Director of the Customs Service of the Republic of Moldova",
+            "Vadim Muntean — Vice President of the ANV",
+            "Igbal Babayev — Chairman of MCTAC",
+            "Sergiu Tonu — Project Manager of Digital Transit Hub"
+          ]
+        },
+        "welcome": {
+          "title": "Welcome speeches",
+          "speakers": [
+            "Vakhtang Lashkaradze — Revenue Service of Georgia",
+            "Sabuhi Tamirov — GUAM",
+            "Sergiusz Horlach — PUIG",
+            "Dariusz Janusz Kostrzebski — PUIG",
+            "Fikrat Alasgarli — Fikrat Alasgarli & Partners Customs and Tax Consultancy",
+            "Vusal Halilov — MOBIL Group AZ",
+            "Umut Sedele — SDL Authorized Customs Consultancy",
+            "Oleksandr Andreiev — ROKADA Private Enterprise",
+            "Andrey Bogomolov — ROKADA Group",
+            "Piotr Ciarkowski — PUIG / signing of protocol with ANV"
+          ]
+        },
+        "trade": {
+          "title": "Welcome address: facilitating international transport and trade",
+          "speakers": [
+            "Valeriu Tulbu — AITA",
+            "Vasile Soiman — National Professional Association of Customs Officers of Romania (ANPLVR)",
+            "Marin Ciobanu — ZEL Balti",
+            "Victor Pantiru — Pantiru & Partners Associated Law Firm",
+            "Ana Maria Portoni — GMT EuroTrans",
+            "Adrian Tenu — IMPERADOR",
+            "Dorel Noroc — Association of Banks of Moldova (ABM)",
+            "Igor Stefanet — LogiHub (Public Association)",
+            "Mariana Rufa — European Business Association (EBA)",
+            "Dmitrii Razloga — IMENSITATE",
+            "Eduard Sirbu — DecTrans Broker",
+            "Grigore Cojocaru — AXEDUM",
+            "Alex Micu — MecAgro",
+            "Rodica Musteata — Fiscal Monitor",
+            "Adina Afendulis — Expediror Prest",
+            "Constantin Pirii — ICCO GROUP",
+            "Rares Felder — MONTESSORI School Brasov"
+          ]
+        },
+        "lunch": {
+          "title": "Networking lunch"
+        },
+        "keynote": {
+          "title": "Keynote — The future of digital transit",
+          "description": "International trends in digital customs, electronic data exchange, interoperability, smart borders and digital transit corridors.",
+          "speakers": [
+            "Igbal Babayev — Chairman of MCTAC",
+            "Mario Apostolov — UNECE"
+          ]
+        },
+        "hub": {
+          "title": "Digital Transit Hub — From concept to regional instrument",
+          "description": "Presentation of the solution; live demonstration; functionalities; user experiences; development directions.",
+          "speakers": [
+            "Igbal Babayev — Chairman of MCTAC",
+            "Sergiu Tonu — Project Manager of the National Customs Association of Moldova (ANV)"
+          ]
+        },
+        "business": {
+          "title": "Business & logistics panel — What does business need from digital customs?",
+          "description": "Participants: carriers, logistics operators, customs brokers, importers/exporters, professional associations and business organizations. The session will identify user problems, costs and delays, information needs, data duplication, automation opportunities and priority functionalities."
+        },
+        "closing": {
+          "title": "Closing conclusions",
+          "description": "Presentation of the main conclusions and transition to the workshop on the following day."
+        },
+        "reception": {
+          "title": "Networking reception",
+          "description": "Space for professional relationships, informal exchange of experience, identification of future partnerships and international networking."
+        }
+      },
+      "workshop": {
+        "registration": {
+          "title": "Registration, networking & welcome coffee"
+        },
+        "coffee": {
+          "title": "Coffee break"
+        },
+        "opening": {
+          "title": "Official opening",
+          "speakers": [
+            "Virgil Mitu — President of the National Customs Association of Moldova (ANV)",
+            "Vadim Muntean — Vice President of the National Customs Association of Moldova (ANV)"
+          ]
+        },
+        "digitalization": {
+          "title": "Session I — Digitalization of the transit corridor",
+          "speakers": [
+            "Igbal Babayev — Chairman of MCTAC; MCTAC Digital Transit Hub",
+            "Mario Apostolov — UNECE; organizational and technical aspects of the MCTAC Digital Transit Hub",
+            "Sergiu Tonu — Project Manager of the National Customs Association of Moldova"
+          ]
+        },
+        "journey": {
+          "title": "Session II — Workshop: digital transit journey",
+          "description": "Practical exploration of end-to-end transit procedures. A practical case study for MCTAC country partners and users.",
+          "speakers": [
+            "Igbal Babayev — Moderator; Chairman of MCTAC"
+          ]
+        },
+        "simulation": {
+          "title": "Session III — Simulation exercise: practical application of transit procedures in real-time scenarios",
+          "description": "Practical, hands-on exercise on transit procedures, simulating real-time operational scenarios.",
+          "speakers": [
+            "Igbal Babayev — Moderator; Chairman of MCTAC"
+          ]
+        },
+        "closing": {
+          "title": "Closing remarks",
+          "description": "Recommendations and alignment among key stakeholders. Closing remarks.",
+          "speakers": [
+            "Bahar Arabova — GIZ Azerbaijan / Digital Transformation of SMEs in Eastern Partnership Countries (DT4SME)"
+          ]
+        },
+        "lunch": {
+          "title": "Lunch"
+        },
+        "dinner": {
+          "title": "Networking dinner"
+        }
+      }
+    },
+    "eventPast": "Event has taken place"
   }
 }

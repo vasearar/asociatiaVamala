@@ -1,219 +1,95 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import type { KeyboardEvent } from "react";
+import { Menu, X } from "lucide-react";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
+import "./NavBar.css";
 
-function NavBarInner() {
+const links = [
+  { to: "/", key: "home" },
+  { to: "/news", key: "news" },
+  { to: "/documents", key: "documents" },
+  { to: "/members", key: "members" },
+  { to: "/forum&workshop", key: "forumWorkshop" },
+  { to: "/contact", key: "contact" },
+];
+
+export function NavBar() {
   const { t } = useTranslation(undefined, { keyPrefix: "navbar" });
   const [isOpen, setIsOpen] = useState(false);
-
-  const linkBase = "transition-colors hover:text-[#5F9CFF]";
-  const active = "text-[#5F9CFF]";
+  const menuRef = useRef<HTMLDivElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
-
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setIsOpen(false);
+    if (!isOpen) return;
+    const previousFocus = document.activeElement as HTMLElement | null;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeRef.current?.focus();
+    const onResize = () => { if (window.innerWidth >= 1200) setIsOpen(false); };
+    window.addEventListener("resize", onResize);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("resize", onResize);
+      previousFocus?.focus();
     };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
   }, [isOpen]);
 
-  const closeMenu = () => setIsOpen(false);
+  const onMenuKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    // Radix owns keyboard interaction while its language popup is open.
+    if (document.querySelector('[role="listbox"]')) return;
+    if (event.key === "Escape") { event.preventDefault(); setIsOpen(false); }
+    if (event.key !== "Tab") return;
+    const focusable = Array.from(menuRef.current?.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled]), [tabindex="0"]',
+    ) ?? []).filter((element) => element.getClientRects().length > 0);
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault(); last?.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault(); first?.focus();
+    }
+  };
 
+  const brand = <><img src="/Logo.svg" width={42} height={42} alt="" /><span className="site-brand-copy"><span>{t("logoHeader")}</span><small>{t("logoSubHeader")}</small></span></>;
   return (
-    <nav className="bg-[#FCFDFE]/50 backdrop-blur w-full fixed top-0 left-0 right-0 z-40">
-      <div className="grid-cols-full grid items-center container mx-auto px-4">
-        <div className="flex py-4.5 max-[1170px]:col-span-10 col-span-4 items-center">
-          <img className="size-[42px]" src="/Logo.svg" alt="logo" />
-          <div className="flex flex-col ml-2.5">
-            <span className="font-medium xl:text-base text-sm">
-              {t("logoHeader")}
-            </span>
-            <span className="text-[10px] xl:text-xs text-[#3F3F40]">
-              {t("logoSubHeader")}
-            </span>
-          </div>
-        </div>
-
-        <ul className="col-span-5 col-start-5 flex gap-x-9 max-[1170px]:hidden">
-          <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                `${linkBase} ${isActive ? active : ""} transition`
-              }
-            >
-              {t("home")}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/news"
-              className={({ isActive }) =>
-                `${linkBase} ${isActive ? active : ""} transition`
-              }
-            >
-              {t("news")}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/documents"
-              className={({ isActive }) =>
-                `${linkBase} ${isActive ? active : ""} transition`
-              }
-            >
-              {t("documents")}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/members"
-              className={({ isActive }) =>
-                `${linkBase} ${isActive ? active : ""} transition`
-              }
-            >
-              {t("members")}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                `${linkBase} ${isActive ? active : ""} transition`
-              }
-            >
-              {t("contact")}
-            </NavLink>
-          </li>
-        </ul>
-
-        <div className="col-span-3 col-start-11 flex justify-end items-center max-[1170px]:hidden">
-          <LanguageSwitcher />
-          <a
-            href="mailto:contact@anv.md"
-            className="underline text-[#f1f1f1] bg-[#5F9CFF] px-4 py-3 ml-4 rounded-2xl text-center w-fit small-shadow border-[1px] border-[#f1f1f1]"
-          >
-            contact@anv.md
-          </a>
-        </div>
-
-        <div className="col-span-3 col-start-11 hidden max-[1170px]:flex justify-end">
-          <button
-            type="button"
-            className="p-3 -mr-2"
-            aria-label={isOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isOpen}
-            aria-controls="mobile-menu"
-            onClick={() => setIsOpen((v) => !v)}
-          >
-            <span className="block relative w-[20px] h-[18px]">
-              <span
-                className={`absolute left-0 top-0 w-[20px] h-[2px] rounded-full bg-[#3F3F40] transition-all duration-300 ease-out ${
-                  isOpen ? "translate-y-[8px] rotate-45" : ""
-                }`}
-              />
-              <span
-                className={`absolute left-0 top-[7px] w-[20px] h-[2px] rounded-full bg-[#3F3F40] transition-all duration-300 ease-out ${
-                  isOpen ? "opacity-0" : ""
-                }`}
-              />
-              <span
-                className={`absolute left-0 top-[14px] w-[20px] h-[2px] rounded-full bg-[#3F3F40] transition-all duration-300 ease-out ${
-                  isOpen ? "-translate-y-[8px] -rotate-45" : ""
-                }`}
-              />
-            </span>
+    <>
+      <nav className="site-navbar" aria-label={t("navigation")}>
+        <div className="site-navbar-inner">
+          <NavLink to="/" className="site-brand" aria-label={t("logoHeader")}>{brand}</NavLink>
+          <ul className="site-desktop-links">
+            {links.map((link) => <li key={link.key}><NavLink to={link.to}
+              className={({ isActive }) => `site-nav-link${isActive ? " site-nav-link--active" : ""}`}>
+              {t(link.key)}
+            </NavLink></li>)}
+          </ul>
+          <div className="site-desktop-actions"><LanguageSwitcher /><a href="mailto:contact@anv.md" className="site-email-link">contact@anv.md</a></div>
+          <button type="button" className="site-menu-toggle" aria-label={t("openMenu")}
+            aria-expanded={isOpen} aria-controls="mobile-menu" onClick={() => setIsOpen(true)}>
+            <Menu size={24} aria-hidden="true" />
           </button>
         </div>
-      </div>
-
-      <div
-        id="mobile-menu"
-        className={`fixed inset-0 z-50 bg-[#FCFDFE] text-[#0F172A] transition-transform duration-300 ease-out ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-        role="dialog"
-        aria-modal="true"
-      >
-        <div className="flex items-center justify-between px-6 py-4 border-b border-black/5">
-          <div className="flex items-center">
-            <img className="size-[42px]" src="/Logo.svg" alt="logo" />
-            <span className="ml-2 font-medium">{t("logoHeader")}</span>
+      </nav>
+      {isOpen && (
+        <div id="mobile-menu" className="site-mobile-menu" role="dialog" aria-modal="true"
+          aria-label={t("navigation")} ref={menuRef} onKeyDown={onMenuKeyDown}>
+          <div className="site-mobile-menu-header">
+            <NavLink to="/" className="site-brand" onClick={() => setIsOpen(false)}>{brand}</NavLink>
+            <button type="button" className="site-menu-close" aria-label={t("closeMenu")} ref={closeRef} onClick={() => setIsOpen(false)}><X size={24} aria-hidden="true" /></button>
           </div>
-
-          <button
-            type="button"
-            className="p-3"
-            aria-label="Close menu"
-            onClick={() => setIsOpen(false)}
-          >
-            <span className="block relative w-[20px] h-[18px]">
-              <span className="absolute left-0 top-[8px] w-[20px] h-[2px] rounded-full bg-[#3F3F40] rotate-45" />
-              <span className="absolute left-0 top-[8px] w-[20px] h-[2px] rounded-full bg-[#3F3F40] -rotate-45" />
-            </span>
-            <span className="sr-only">{t("close") || "Close"}</span>
-          </button>
-        </div>
-
-        <div className="h-[calc(100vh-64px)] bg-white flex flex-col items-center justify-center gap-8 px-6 text-center">
-          <NavLink
-            to="/"
-            onClick={closeMenu}
-            className={({ isActive }) => `text-2xl ${isActive ? active : ""}`}
-          >
-            {t("home")}
-          </NavLink>
-          <NavLink
-            to="/news"
-            onClick={closeMenu}
-            className={({ isActive }) => `text-2xl ${isActive ? active : ""}`}
-          >
-            {t("news")}
-          </NavLink>
-          <NavLink
-            to="/documents"
-            onClick={closeMenu}
-            className={({ isActive }) => `text-2xl ${isActive ? active : ""}`}
-          >
-            {t("documents")}
-          </NavLink>
-          <NavLink
-            to="/members"
-            onClick={closeMenu}
-            className={({ isActive }) => `text-2xl ${isActive ? active : ""}`}
-          >
-            {t("members")}
-          </NavLink>
-          <NavLink
-            to="/contact"
-            onClick={closeMenu}
-            className={({ isActive }) => `text-2xl ${isActive ? active : ""}`}
-          >
-            {t("contact")}
-          </NavLink>
-
-          <div className="pt-6 flex items-center gap-4">
-            <LanguageSwitcher />
-            <a
-              href="mailto:contact@anv.md"
-              className="underline text-[#f1f1f1] bg-[#5F9CFF] px-4 py-3 rounded-2xl text-center w-fit small-shadow border-[1px] border-[#f1f1f1]"
-              onClick={closeMenu}
-            >
-              contact@anv.md
-            </a>
+          <div className="site-mobile-menu-body">
+            <nav aria-label={t("navigation")}>
+              <ul>{links.map((link) => <li key={link.key}><NavLink to={link.to} onClick={() => setIsOpen(false)}
+                className={({ isActive }) => `site-nav-link${isActive ? " site-nav-link--active" : ""}`}>{t(link.key)}</NavLink></li>)}</ul>
+            </nav>
+            <div className="site-mobile-actions"><LanguageSwitcher /><a href="mailto:contact@anv.md" className="site-email-link" onClick={() => setIsOpen(false)}>contact@anv.md</a></div>
           </div>
         </div>
-      </div>
-    </nav>
+      )}
+    </>
   );
 }
 
-export const NavBar = NavBarInner;
-export default NavBarInner;
+export default NavBar;
